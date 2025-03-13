@@ -1,62 +1,51 @@
-* {
-    background-color: #9494ca;
+:root {
+    --primary-bg-color: #9494ca;
+    --input-bg-color: white;
+    --border-color: black;
+    --font-family: 'Arial';
+}
+
+body {
+    background-color: var(--primary-bg-color);
 }
 
 h1 {
     color: white;
-    Padding: 10px;
+    padding: 10px;
     text-align: center;
     font-size: 50px;
-    font-family: 'Arial';
+    font-family: var(--font-family);
 }
 
-input{
-    background-color:white;  
-    width:75%;
+input, textarea {
+    background-color: var(--input-bg-color);
+    width: 75%;
     margin-left: 12%;
     font-size: 20px;
-    padding: 16px 16px;
+    padding: 16px;
     border-radius: 10px;
-    border-color: black;
+    border: 1px solid var(--border-color);
     margin-bottom: 20px;
+    font-family: var(--font-family);
 }
 
-textarea{
-    background-color:white;
-    width:75%;
-    margin-left: 12%;
-    font-size: 20px;
-    padding: 16px 16px;
-    border-radius: 10px;
-    border-color: black;
-    margin-bottom: 25px;
-    font-family: 'Arial';
-}
-
-input:focus-within{
+input:focus-within, textarea:focus-within {
     outline: none;
-    border-color: black;    
     border-width: 5px;
 }
 
-textarea:focus-within{
-    outline: none;
-    border-color: black;
-    border-width: 5px;
-}
-
-button{
-    background-color: white;
+button {
+    background-color: var(--input-bg-color);
     font-size: 22px;
     padding: 10px 18px;
     border-radius: 20px;
-    border-color: black;
+    border: 1px solid var(--border-color);
     margin: auto;
     display: flex;
     text-align: center;
 }
 
-button:hover{
+button:hover {
     opacity: 80%;
     cursor: pointer;
 }
